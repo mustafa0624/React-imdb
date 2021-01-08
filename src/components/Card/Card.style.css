@@ -1,0 +1,15 @@
+.card-wrapper{
+    width: 150px;
+    height: auto;
+    border:1px solid rgba(0,0,0,0.2);
+    border-radius: 10px;
+    height: 200px;
+    box-shadow: 3px 3px 1px rgba(0,0,0,0.1);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+p{
+    color: red;
+
+}
