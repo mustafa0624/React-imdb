@@ -6,15 +6,18 @@ width: 160px;
     height: auto;
     border:1px solid rgba(0,0,0,0.2);
     border-radius: 10px;
-    /* height: 200px; */
     box-shadow: 3px 3px 1px rgba(0,0,0,0.1);
     justify-content: center;
-    /* display: flex; */
     align-items: center;
-    padding:10px;
-    margin:2px,
     display: flex;
     flex-direction: column;
+    padding-top:20px;
+    transition: 0.2s;
+    &:hover{
+        transform:scale(1.1);
+        box-shadow:1px 1px 1px rgba(0,0,0,0.5)
+    }
+    
 `;
 export const StyledText = styled.p`
 color:red
@@ -22,6 +25,7 @@ color:red
 
 export const StyledImage = styled.img`
     width:90%;
-    height:auto  ;
+    height:80%  ;
+    border-radius:10px;
     /* border:1px solid black */
 `;

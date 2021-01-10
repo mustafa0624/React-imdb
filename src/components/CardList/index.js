@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { Card } from "../Card"
 import axios from "axios"
-import "./CardList.style.css"
+import {StyledCardList} from "./CardList.style.js"
 
 const apiKey = "dc0e887a66153e000adb1a0223f295b2"
 const baseurl = "https://api.themoviedb.org/3/search/movie"
@@ -25,7 +25,7 @@ export const CardList = () => {
 
     return (
 
-        <div className="wrapper">
+        <StyledCardList>
             {
               movies?.map((movie,index)=>{
                   return(
@@ -37,7 +37,7 @@ export const CardList = () => {
                   )  
                 })
             }
-        </div>
+        </StyledCardList>
     )
 
 
