@@ -1,27 +1,14 @@
 import React, { useEffect, useState } from "react"
 import { Card } from "../Card"
-import axios from "axios"
+
 import {StyledCardList} from "./CardList.style.js"
 
-const apiKey = "dc0e887a66153e000adb1a0223f295b2"
-const baseurl = "https://api.themoviedb.org/3/search/movie"
-const img_Url = 'https://image.tmdb.org/t/p/w500'
+
 // https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&language=en-US&query=test&page=1&include_adult=false
 
-export const CardList = () => {
+export const CardList = ({movies,img_Url}) => {
 
-    const [movies,dataMovies]=useState()
-
-    useEffect(()=>{
-        axios.get(baseurl,{
-            params:{
-                api_key:apiKey,
-                page:1,
-                query:"star wars",
-            }
-        }).then((res)=>dataMovies(res?.data?.results))
-        .catch((err)=>console.log(err))
-    },[])
+    
 
     return (
 

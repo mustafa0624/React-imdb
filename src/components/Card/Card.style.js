@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 
 export const StyledCardWrapper = styled.div`
-width: 160px;
+width: 15%;
     height: auto;
     border:1px solid rgba(0,0,0,0.2);
     border-radius: 10px;
@@ -20,7 +20,8 @@ width: 160px;
     
 `;
 export const StyledText = styled.p`
-color:red
+color:red;
+font-size:0.8rem
 `;
 
 export const StyledImage = styled.img`

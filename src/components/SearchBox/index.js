@@ -1,11 +1,11 @@
 import React from 'react'
-import {StyledSearchBoxWrapper} from "./SearchBox.style.js"
+import {StyledSearchBoxWrapper,StyledInput,StyledButton} from "./SearchBox.style.js"
 
 export const SearchBox = () => {
     return (
         <StyledSearchBoxWrapper>
-            <input/>
-           <button onClick={()=>{}}>Search </button> 
+            <StyledInput isColored={false}/>
+           <StyledButton onClick={()=>{}} >Search </StyledButton> 
         </StyledSearchBoxWrapper>
     )
 }
