@@ -1,7 +1,6 @@
 import React from "react"
-import "./Card.style.css"
 import { StyledCardWrapper, StyledText, StyledImage } from "./Card.style.js"
-// import axios from "axios"
+
 
 
 export const Card = ({title,imgSrc}) => {

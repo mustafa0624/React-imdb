@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { Card } from "../Card"
 
 import {StyledCardList} from "./CardList.style.js"
@@ -29,31 +29,3 @@ export const CardList = ({movies,img_Url}) => {
 
 
 }
-// adult: false
-// backdrop_path: "/5Iw7zQTHVRBOYpA0V6z0yypOPZh.jpg"
-// genre_ids: (3) [878, 28, 12]
-// id: 181808
-// original_language: "en"
-// original_title: "Star Wars: The Last Jedi"
-// overview: "Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares to do battle with the First Order."
-// popularity: 93.471
-// poster_path: "/kOVEVeg59E0wsnXmF9nrh6OmWII.jpg"
-// release_date: "2017-12-13"
-// title: "Star Wars: The Last Jedi"
-// video: false
-// vote_average: 6.9
-// vote_count: 11431
-// __proto__: Object
-
-
-{/* <div className="wrapper">
-{
-   movieData && movieData.map(movie => {
-        return <Card title = {movie.title} id={movie.id} />
-        
-
-    })
-
-}
-
-</div> */}

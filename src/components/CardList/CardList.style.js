@@ -6,6 +6,7 @@ display: flex;
     margin:2px;
     gap: 1.5rem;
     justify-content:center;
+    /* align-items:center; */
     
 
 `

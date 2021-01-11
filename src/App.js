@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import {useEffect,useState} from 'react'
 import axios from "axios"
@@ -12,21 +12,22 @@ const img_Url = 'https://image.tmdb.org/t/p/w500'
 function App() {
 
   const [movies,dataMovies]=useState()
+  const [searchValue,setSearchValue] = useState(false)
 
     useEffect(()=>{
         axios.get(baseurl,{
             params:{
                 api_key:apiKey,
                 page:1,
-                query:"star wars",
+                query:!searchValue ? "star wars" : searchValue,
             }
         }).then((res)=>dataMovies(res?.data?.results))
         .catch((err)=>console.log(err))
-    },[])
+    },[searchValue])
 
   return (
     <div className="App">
-      <SearchBox/>
+      <SearchBox setSearchValue={setSearchValue}/>
       <CardList movies={movies} img_Url={img_Url}/>
     </div>
   );

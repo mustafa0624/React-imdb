@@ -12,12 +12,11 @@ border-color:rgba(0,0,0,0.3);
 margin-right:10px;
 padding:5px;
 color:red;
- ${p => p.isColored &&
+${p=>p.isColored && 
     css`
-    color:blue;
+    color:yellow
     `
-}
-
+    }
 
 `
 
