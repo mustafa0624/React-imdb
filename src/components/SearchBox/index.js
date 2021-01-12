@@ -1,13 +1,18 @@
-import React, { useState } from 'react'
+import React, { useRef,useContext } from 'react'
 import {StyledSearchBoxWrapper,StyledInput,StyledButton} from "./SearchBox.style.js"
+import {MovieContext} from "../../App"
 
-export const SearchBox = ({setSearchValue}) => {
-    const [inputValue,SetInputValue] = useState("")
+export const SearchBox = () => {
+    
+   const inputRef = useRef()
+   const {setSelectedInput} = useContext(MovieContext)
+
+    
 
     return (
         <StyledSearchBoxWrapper>
-            <StyledInput isColored={false} onChange={(e)=>SetInputValue(e.target.value)} />
-           <StyledButton onClick={()=>setSearchValue(inputValue)} >Search </StyledButton> 
+            <StyledInput ref={inputRef} isColored={false} />
+           <StyledButton onClick={()=>setSelectedInput(inputRef.current.value)} >Search </StyledButton> 
         </StyledSearchBoxWrapper>
     )
 }

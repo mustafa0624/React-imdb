@@ -1,14 +1,15 @@
-import React from "react"
+import React,{useContext} from "react"
 import { Card } from "../Card"
 
 import {StyledCardList} from "./CardList.style.js"
+import {MovieContext} from "../../App"
 
 
 // https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&language=en-US&query=test&page=1&include_adult=false
 
-export const CardList = ({movies,img_Url}) => {
+export const CardList = () => {
 
-    
+  const {movies,img_Url} = useContext(MovieContext);  
 
     return (
 

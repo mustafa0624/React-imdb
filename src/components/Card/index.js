@@ -11,7 +11,7 @@ export const Card = ({title,imgSrc}) => {
 
     return (
         <StyledCardWrapper>
-            <StyledImage src={imgSrc}/>
+            <StyledImage src={imgSrc} alt="image"/>
             
             
             <StyledText>
